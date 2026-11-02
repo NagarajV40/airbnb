@@ -1,6 +1,4 @@
-{{ config(
-    materialized='table'
-)}}
+
 with raw_reviews as (
     select * from 
     {{source('airbnb','reviews')}}
