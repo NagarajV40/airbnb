@@ -31,8 +31,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   Airbnb_dbt_snowflake:
-    # Config indicated by + and applies to all files under models/example/
-    example:
       +materialized: view
       dim:
-      +materialized: table
+        +materialized: table
+      src:
+        +materialized: ephemeral
